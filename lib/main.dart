@@ -7,7 +7,6 @@ import 'screens/restaurant_list_screen.dart';
 import 'screens/favourite_screen.dart';
 import 'screens/restaurant_detail_screen.dart';
 import 'models/restaurant.dart';
-import 'models/user.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,9 +15,6 @@ void main() async {
   // Register Hive Adapter untuk Restaurant
   Hive.registerAdapter(RestaurantAdapter());
   await Hive.openBox<Restaurant>('favourites');
-
-  Hive.registerAdapter(UserAdapter());
-  await Hive.openBox<User>('users');
 
   runApp(const MyApp());
 }

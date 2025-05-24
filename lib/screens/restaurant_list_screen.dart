@@ -123,12 +123,15 @@ class _RestaurantListScreenState extends State<RestaurantListScreen> {
                           ),
                           subtitle: Row(
                             children: [
-                              const Icon(Icons.location_pin, size: 16, color: Colors.deepPurple),
+                              const Icon(Icons.location_pin,
+                                  size: 16, color: Colors.deepPurple),
                               const SizedBox(width: 4),
-                              Text(r.city, style: const TextStyle(fontSize: 14)),
+                              Text(r.city,
+                                  style: const TextStyle(fontSize: 14)),
                             ],
                           ),
-                          trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+                          trailing:
+                              const Icon(Icons.arrow_forward_ios, size: 16),
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
